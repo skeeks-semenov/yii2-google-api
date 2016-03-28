@@ -1,7 +1,7 @@
-Component for work with google api based on google/google-api-php-client
+Component for work with google api
 ===================================
 
-Partly wrapper over powerful official package from google
+Partly wrapper over powerful official package from google — google/google-api-php-client
 
 Installation
 ------------
