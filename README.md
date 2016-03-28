@@ -1,8 +1,7 @@
-Automatically compile and merge files js + css
+Component for work with google api based on google/google-api-php-client
 ===================================
 
-This solution enables you to dynamically combine js and css files to optimize the html page.
-This allows you to improve the performance of google page speed
+Partly wrapper over powerful official package from google
 
 Installation
 ------------

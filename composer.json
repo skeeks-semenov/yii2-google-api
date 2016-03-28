@@ -1,6 +1,6 @@
 {
 	"name": "skeeks/yii2-google-api",
-	"description": "Component for work with google api based on google/google",
+	"description": "Component for work with google api based on google/google-api-php-client",
 	"keywords": ["yii", "yii2", "skeeks", "api", "component", "google"],
     "homepage": "http://skeeks.com",
 	"type": "yii2-extension",
