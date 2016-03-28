@@ -1,0 +1,34 @@
+{
+	"name": "skeeks/yii2-google-api",
+	"description": "Component for work with google api based on google/google",
+	"keywords": ["yii", "yii2", "skeeks", "api", "component", "google"],
+    "homepage": "http://skeeks.com",
+	"type": "yii2-extension",
+	"license": "GPL-3.0+",
+	"support": {
+        "issues": "https://github.com/skeeks-semenov/yii2-google-api/issues",
+        "source": "https://github.com/skeeks-semenov/yii2-google-api/",
+        "authors": "http://skeeks.com"
+    },
+	"authors": [
+        {
+            "name": "SkeekS",
+            "email": "support@skeeks.com",
+            "homepage": "http://skeeks.com"
+        },
+        {
+            "name": "Semenov Alexander",
+            "email": "semenov@skeeks.com"
+        }
+    ],
+	"require": {
+		"yiisoft/yii2": "*",
+        "google/apiclient": "^2.0.0@RC",
+        "google/apiclient-services": "*"
+	},
+    "autoload": {
+        "psr-4": {
+            "skeeks\\yii2\\googleApi\\": ""
+        }
+    }
+}
