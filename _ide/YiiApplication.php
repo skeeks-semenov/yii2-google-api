@@ -11,6 +11,7 @@ use skeeks\yii2\googleApi;
 
 /**
  * @property GoogleApiComponent                   $googleApi
+ *
  * Class Application
  * @package yii\web
  */
