@@ -6,7 +6,7 @@
  * @date 28.03.2016
  */
 
-namespace skeeks\yii2\google;
+namespace skeeks\yii2\googleApi;
 use \Yii;
 use yii\base\Component;
 

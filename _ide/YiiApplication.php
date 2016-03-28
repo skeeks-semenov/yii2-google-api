@@ -7,7 +7,7 @@
  */
 
 namespace yii\web;
-use skeeks\yii2\googleApi;
+use skeeks\yii2\googleApi\GoogleApiComponent;
 
 /**
  * @property GoogleApiComponent                   $googleApi

@@ -24,6 +24,7 @@ or add
 How to use
 ----------
 
+## Configuration app
 ```php
 //App config
 [
@@ -41,6 +42,24 @@ How to use
 
 ```
 
+## An example of the Api transliteration
+
+```php
+
+$service = new Google_Service_Translate(\Yii::$app->googleApi->client);
+$result = $service->languages->listLanguages([
+    'target' => 'ru'
+]);
+print_r($result);
+
+```
+
+```php
+
+$result = $service->translations->listTranslations('apple', 'ru');
+print_r($result);
+
+```
 
 ___
 
