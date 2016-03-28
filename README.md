@@ -47,6 +47,8 @@ How to use
 
 ## An example of the Api transliteration
 
+https://cloud.google.com/translate/v2/using_rest
+
 ```php
 
 $service = new Google_Service_Translate(\Yii::$app->googleApi->client);
