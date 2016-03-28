@@ -1,4 +1,4 @@
-Component for work with google api
+Component for work with official google api
 ===================================
 
 Partly wrapper over powerful official package from google — google/apiclient
