@@ -3,6 +3,9 @@ Component for work with google api
 
 Partly wrapper over powerful official package from google — google/google-api-php-client
 
+[google/apiclient-services](https://github.com/google/google-api-php-client)
+[google/apiclient-services](https://github.com/google/google-api-php-client)
+
 Installation
 ------------
 
