@@ -28,7 +28,7 @@ or add
 How to use
 ----------
 
-## Configuration app
+### Configuration app
 ```php
 //App config
 [
@@ -46,7 +46,7 @@ How to use
 
 ```
 
-## An example of the Api transliteration
+### An example of the Api transliteration
 
 https://cloud.google.com/translate/v2/using_rest
 
