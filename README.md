@@ -3,8 +3,8 @@ Component for work with google api
 
 Partly wrapper over powerful official package from google — google/google-api-php-client
 
-[google/apiclient-services](https://github.com/google/google-api-php-client)
-[google/apiclient-services](https://github.com/google/google-api-php-client)
+* [google/apiclient](https://github.com/google/google-api-php-client)
+* [google/apiclient-services](https://github.com/google/google-api-php-client-services)
 
 Installation
 ------------
@@ -66,7 +66,8 @@ print_r($result);
 
 ___
 
-> [![skeeks!](https://gravatar.com/userimage/74431132/13d04d83218593564422770b616e5622.jpg)](http://skeeks.com)
-<i>SkeekS CMS (Yii2) — quickly, easily and effectively!</i>
+> [![skeeks!](https://gravatar.com/userimage/74431132/13d04d83218593564422770b616e5622.jpg)](http://skeeks.com)  
+<i>SkeekS CMS (Yii2) — quickly, easily and effectively!</i>  
 [skeeks.com](http://skeeks.com) | [en.cms.skeeks.com](http://en.cms.skeeks.com) | [cms.skeeks.com](http://cms.skeeks.com) | [marketplace.cms.skeeks.com](http://marketplace.cms.skeeks.com)
+
 
