@@ -7,6 +7,10 @@ Partly wrapper over powerful official package from google — google/apiclient
 * [google/apiclient-services](https://github.com/google/google-api-php-client-services)
 * https://console.cloud.google.com/home/dashboard
 
+
+[![Latest Stable Version](https://img.shields.io/packagist/v/skeeks/yii2-google-api.svg)](https://packagist.org/packages/skeeks/yii2-google-api)
+[![Total Downloads](https://img.shields.io/packagist/dt/skeeks/yii2-google-api.svg)](https://packagist.org/packages/skeeks/yii2-google-api)
+
 Installation
 ------------
 
