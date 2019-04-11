@@ -4,17 +4,17 @@
 	"keywords": ["yii", "yii2", "skeeks", "api", "component", "google"],
     "homepage": "http://skeeks.com",
 	"type": "yii2-extension",
-	"license": "GPL-3.0+",
+	"license": "BSD-3-Clause",
 	"support": {
         "issues": "https://github.com/skeeks-semenov/yii2-google-api/issues",
         "source": "https://github.com/skeeks-semenov/yii2-google-api/",
-        "authors": "http://skeeks.com"
+        "authors": "https://skeeks.com"
     },
 	"authors": [
         {
             "name": "SkeekS",
             "email": "support@skeeks.com",
-            "homepage": "http://skeeks.com"
+            "homepage": "https://skeeks.com"
         },
         {
             "name": "Semenov Alexander",
@@ -22,13 +22,12 @@
         }
     ],
 	"require": {
-		"yiisoft/yii2": "*",
-        "google/apiclient": "^2.0.0@RC",
-        "google/apiclient-services": "*"
+		"yiisoft/yii2": "^2.0.0",
+        "google/apiclient": "^2.2.0"
 	},
     "autoload": {
         "psr-4": {
-            "skeeks\\yii2\\googleApi\\": ""
+            "skeeks\\yii2\\googleApi\\": "src/"
         }
     }
 }
