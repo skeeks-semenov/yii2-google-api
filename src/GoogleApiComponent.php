@@ -1,9 +1,9 @@
 <?php
 /**
+ * @link https://cms.skeeks.com/
+ * @copyright Copyright (c) 2010 SkeekS
+ * @license https://cms.skeeks.com/license/
  * @author Semenov Alexander <semenov@skeeks.com>
- * @link http://skeeks.com/
- * @copyright 2010 SkeekS (СкикС)
- * @date 28.03.2016
  */
 
 namespace skeeks\yii2\googleApi;
@@ -13,8 +13,7 @@ use yii\base\Component;
 /**
  * @property \Google_Client $client
  *
- * Class GoogleComponent
- * @package common\components
+ * @author Semenov Alexander <semenov@skeeks.com>
  */
 class GoogleApiComponent extends Component
 {
@@ -26,5 +25,10 @@ class GoogleApiComponent extends Component
         $client->setDeveloperKey($this->developer_key);
 
         return $client;
+    }
+
+    public function translate($source_phrase, $target_language, $source_language = null, $source_format = 'text')
+    {
+
     }
 }
