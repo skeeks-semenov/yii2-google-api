@@ -7,13 +7,15 @@
  */
 
 namespace yii\web;
-use skeeks\yii2\googleApi\GoogleApiComponent;
+
+use skeeks\yii2\googleApi\GoogleApi;
 
 /**
- * @property GoogleApiComponent                   $googleApi
+ * @property GoogleApi $googleApi
  *
  * Class Application
  * @package yii\web
  */
 class Application
-{}
+{
+}

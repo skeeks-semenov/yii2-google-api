@@ -54,22 +54,28 @@ How to use
 
 https://cloud.google.com/translate/v2/using_rest
 
-```php
 
-$service = new Google_Service_Translate(\Yii::$app->googleApi->client);
+```php
+$result = \Yii::$app->googleApi->translate('apple', 'ru');
+print_r($result);
+```
+
+```php
+$result = \Yii::$app->googleApi->serviceTranslate->translations->listTranslations('apple', 'ru');
+print_r($result);
+```
+
+
+```php
+$service = \Yii::$app->googleApi->serviceTranslate;
 $result = $service->languages->listLanguages([
     'target' => 'ru'
 ]);
 print_r($result);
-
 ```
 
-```php
 
-$result = $service->translations->listTranslations('apple', 'ru');
-print_r($result);
 
-```
 
 
 ___
