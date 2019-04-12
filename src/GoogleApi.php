@@ -13,6 +13,8 @@ use skeeks\yii2\googleApi\services\GoogleApiServiceTranslate;
 use skeeks\yii2\googleApi\services\GoogleApiServiceYoutube;
 use yii\base\Component;
 use yii\base\Exception;
+use yii\base\InvalidConfigException;
+use yii\helpers\ArrayHelper;
 
 /**
  * @property \Google_Client            $googleClient
@@ -56,27 +58,55 @@ class GoogleApi extends Component
     }
 
     /**
+     * @param $serviceName
+     * @return GoogleApiService
+     * @throws InvalidConfigException
+     */
+    private function _createService(string $serviceName) {
+        $serviceName = $serviceName . "Class";
+        if (!isset($this->{$serviceName})) {
+            throw new InvalidConfigException("Not exist service");
+        }
+
+        $serviceData = $this->{$serviceName};
+        $config = [
+            'googleApi' => $this
+        ];
+
+        if (is_string($serviceData)) {
+            $config = ArrayHelper::merge($config, [
+                'class' => $serviceData
+            ]);
+        } elseif(is_array($serviceData)) {
+            $config = ArrayHelper::merge($serviceData, $config);
+        }
+
+        return \Yii::createObject($config);
+    }
+
+    /**
      * @return GoogleApiServiceTranslate
+     * @throws InvalidConfigException
      */
     public function getServiceTranslate()
     {
-        $class = $this->serviceTranslateClass;
-        return new $class($this);
+        return $this->_createService("serviceTranslate");
     }
     /**
      * @return GoogleApiServiceYoutube
+     * @throws InvalidConfigException
      */
     public function getServiceYoutube()
     {
-        $class = $this->serviceYoutubeClass;
-        return new $class($this);
+        return $this->_createService("serviceYoutube");
     }
+
     /**
      * @return GoogleApiServiceAdsense
+     * @throws InvalidConfigException
      */
     public function getServiceAdsense()
     {
-        $class = $this->serviceAdsenseClass;
-        return new $class($this);
+        return $this->_createService("serviceAdsense");
     }
 }

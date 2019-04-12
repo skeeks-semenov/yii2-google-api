@@ -23,7 +23,7 @@ abstract class GoogleApiService extends Component implements GoogleApiServiceInt
      */
     public $googleApi;
 
-    public function __construct(GoogleApi $googleApi, $config = [])
+    public function __construct(GoogleApi $googleApi = null, $config = [])
     {
         $this->googleApi = $googleApi;
         parent::__construct($config);
