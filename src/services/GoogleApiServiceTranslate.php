@@ -24,7 +24,7 @@ class GoogleApiServiceTranslate extends GoogleApiService
      */
     public function getGoogleService()
     {
-        return new \Google_Service_Translate($this->client);
+        return new \Google_Service_Translate($this->googleApi->googleClient);
     }
 
     /**
