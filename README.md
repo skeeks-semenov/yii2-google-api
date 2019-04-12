@@ -107,6 +107,37 @@ $googleServiceAdsense = new \Google_Service_Youtube($googleClient);
 
 ```
 
+Your Google Services
+---
+
+```php
+//App config
+[
+    'components'    =>
+    [
+    //....
+        'googleApi' =>
+        [
+            'class'       => '\skeeks\yii2\googleApi\GoogleApi',
+            'key'         => 'YOUR_GOOLE_API_KEY',
+            
+            'serviceTranslateClass' => 'skeeks\cms\googleApi\serviceTranslate\GoogleApiServiceTranslate'
+            
+            //or
+            
+            'serviceTranslateClass' => [
+                'class' => 'skeeks\cms\googleApi\serviceTranslate\GoogleApiServiceTranslate',
+                
+                'option' => 'value'
+            ],
+        ],
+    //....
+    ]
+]
+
+```
+
+
 ___
 
 > [![skeeks!](https://skeeks.com/img/logo/logo-no-title-80px.png)](https://skeeks.com)  
