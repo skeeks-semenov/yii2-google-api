@@ -41,8 +41,8 @@ How to use
     //....
         'googleApi' =>
         [
-            'class'                 => '\skeeks\yii2\googleApi\GoogleApiComponent',
-            'developer_key'         => 'YOUR_GOOLE_API_KEY',
+            'class'       => '\skeeks\yii2\googleApi\GoogleApi',
+            'key'         => 'YOUR_GOOLE_API_KEY',
         ],
     //....
     ]
@@ -50,24 +50,44 @@ How to use
 
 ```
 
-### An example of the Api transliteration
+An example of the Api transliteration
+---
 
 https://cloud.google.com/translate/v2/using_rest
 
+Translate "apple"
 
 ```php
-$result = \Yii::$app->googleApi->translate('apple', 'ru');
+$result = \Yii::$app->googleApi->serviceTranslate->translate('apple', 'ru');
+print_r($result);
+```
+
+or
+
+```php
+$result = \Yii::$app->googleApi->serviceTranslate->googleService->translations->listTranslations('apple', 'ru');
+print_r($result);
+```
+
+or
+
+```php
+$googleService = \Yii::$app->googleApi->serviceTranslate->googleService;
+$result = $googleService->translations->listTranslations('apple', 'ru');
+print_r($result);
+```
+
+or
+
+```php
+$googleClient = \Yii::$app->googleApi->googleClient;
+$googleService = new \Google_Service_Translate($googleClient);
+$result = $googleService->translations->listTranslations('apple', 'ru');
 print_r($result);
 ```
 
 ```php
-$result = \Yii::$app->googleApi->serviceTranslate->translations->listTranslations('apple', 'ru');
-print_r($result);
-```
-
-
-```php
-$service = \Yii::$app->googleApi->serviceTranslate;
+$service = \Yii::$app->googleApi->serviceTranslate->googleService;
 $result = $service->languages->listLanguages([
     'target' => 'ru'
 ]);
@@ -75,8 +95,17 @@ print_r($result);
 ```
 
 
+An example other google services
+---
 
+```php
 
+$googleClient = \Yii::$app->googleApi->googleClient;
+$googleServiceAdsense = new \Google_Service_Adsense($googleClient);
+$googleServiceAdsense = new \Google_Service_Youtube($googleClient);
+//....
+
+```
 
 ___
 

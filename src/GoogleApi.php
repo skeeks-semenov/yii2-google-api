@@ -8,16 +8,18 @@
 
 namespace skeeks\yii2\googleApi;
 
+use skeeks\yii2\googleApi\services\GoogleApiServiceAdsense;
 use skeeks\yii2\googleApi\services\GoogleApiServiceTranslate;
+use skeeks\yii2\googleApi\services\GoogleApiServiceYoutube;
 use yii\base\Component;
 use yii\base\Exception;
 
 /**
  * @property \Google_Client            $googleClient
  *
- * @property \Google_Service_Translate $serviceTranslate
- * @property \Google_Service_YouTube   $serviceYoutube
- * @property \Google_Service_AdSense   $serviceAdsense
+ * @property GoogleApiServiceTranslate $serviceTranslate
+ * @property GoogleApiServiceYoutube   $serviceYoutube
+ * @property GoogleApiServiceAdsense   $serviceAdsense
  *
  * @author Semenov Alexander <semenov@skeeks.com>
  */
@@ -28,6 +30,19 @@ class GoogleApi extends Component
      * @var string
      */
     public $key = '';
+
+    /**
+     * @var string
+     */
+    public $serviceTranslateClass = GoogleApiServiceTranslate::class;
+    /**
+     * @var string
+     */
+    public $serviceYoutubeClass = GoogleApiServiceYoutube::class;
+    /**
+     * @var string
+     */
+    public $serviceAdsenseClass = GoogleApiServiceAdsense::class;
 
     /**
      * @return \Google_Client
@@ -45,6 +60,23 @@ class GoogleApi extends Component
      */
     public function getServiceTranslate()
     {
-        return new GoogleApiServiceTranslate($this);
+        $class = $this->serviceTranslateClass;
+        return new $class($this);
+    }
+    /**
+     * @return GoogleApiServiceYoutube
+     */
+    public function getServiceYoutube()
+    {
+        $class = $this->serviceYoutubeClass;
+        return new $class($this);
+    }
+    /**
+     * @return GoogleApiServiceAdsense
+     */
+    public function getServiceAdsense()
+    {
+        $class = $this->serviceAdsenseClass;
+        return new $class($this);
     }
 }
