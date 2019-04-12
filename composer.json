@@ -1,7 +1,7 @@
 {
 	"name": "skeeks/yii2-google-api",
 	"description": "Component for work with google api based on google/apiclient",
-	"keywords": ["yii", "yii2", "skeeks", "api", "component", "google"],
+	"keywords": ["yii", "yii2", "skeeks", "api", "component", "google", "client"],
     "homepage": "https://skeeks.com",
 	"type": "yii2-extension",
 	"license": "BSD-3-Clause",
