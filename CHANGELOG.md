@@ -1,6 +1,10 @@
 CHANGELOG
 ==============
 
+2.0.1
+-----------------
+  * New version stable release
+  
 2.0.0
 -----------------
   * New version
